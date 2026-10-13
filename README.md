@@ -2,7 +2,7 @@
 Nama : Ramadhan Abdul Aziz
 NIM  : 103012580007
 
-## Detail di make help 
+## Detail in make help 
 ```bash
 make help
 ```
