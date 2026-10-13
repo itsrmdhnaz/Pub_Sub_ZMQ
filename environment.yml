@@ -1,0 +1,9 @@
+name: tugas4-pub-sub
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.12
+  - pip
+  - pip:
+    - pyzmq==27.2.0

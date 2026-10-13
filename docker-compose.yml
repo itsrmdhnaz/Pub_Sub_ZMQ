@@ -1,0 +1,31 @@
+services:
+  publisher:
+    build: .
+    command: python publisher.py
+    ports:
+      - "9991:9991"
+    restart: unless-stopped
+
+  # Subscriber 1: Alif Mahtum Alfaidz
+  sub-alif:
+    build: .
+    command: python subscriber.py 103012580030-AMA 103012580030 publisher 9991
+    depends_on:
+      - publisher
+    restart: unless-stopped
+
+  # Subscriber 2: I.G.N. Brindawan Tri Guna Yoga
+  sub-brindawan:
+    build: .
+    command: python subscriber.py 103012580016-BTY 103012580016 publisher 9991
+    depends_on:
+      - publisher
+    restart: unless-stopped
+
+  # Subscriber 3: Wisnu Kresnohadi
+  sub-wisnu:
+    build: .
+    command: python subscriber.py 103012580010-WKH 103012580010 publisher 9991
+    depends_on:
+      - publisher
+    restart: unless-stopped
